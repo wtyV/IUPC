@@ -1,0 +1,116 @@
+project: lunar_base_launch_project
+version: 0.6
+principle: "Each agent owns a narrow output set and must not overwrite other agents' files."
+
+agents:
+  - id: A_problem_sources
+    name: "题目解析与资料智能体"
+    workspace: "agents/A_problem_sources"
+    owns:
+      - "docs/assumptions_and_sources.md"
+    responsibilities:
+      - "核对题目解释、公开资料、引用链接和假设边界。"
+      - "标注哪些参数是官方公开值，哪些是工程假设。"
+    inputs:
+      - "../docs/problem_day_1.md"
+      - "../docs/menu.md"
+      - "../docs/notes.md"
+    outputs:
+      - "docs/assumptions_and_sources.md"
+
+  - id: B_architecture
+    name: "任务架构智能体"
+    workspace: "agents/B_architecture"
+    owns:
+      - "src/architecture.py"
+      - "src/rendezvous.py"
+      - "results/tables/architecture_summary.csv"
+      - "results/tables/rendezvous_plan.csv"
+    responsibilities:
+      - "比较单发、两发 LEO 对接、三发冗余和 40 t 单体 LEO 组合方案。"
+      - "检查载荷拆分、运力余量和成功条件。"
+      - "建立 LEO 交会对接的一阶相位与速度增量模型。"
+    outputs:
+      - "results/tables/architecture_summary.csv"
+
+  - id: C_reliability
+    name: "可靠性智能体"
+    workspace: "agents/C_reliability"
+    owns:
+      - "src/reliability.py"
+      - "results/tables/reliability_sweep.csv"
+      - "results/tables/mission_chain_reliability.csv"
+      - "results/tables/mission_chain_sensitivity.csv"
+      - "results/tables/engine_cluster_sweep.csv"
+      - "results/figures/mission_reliability.svg"
+      - "results/figures/mission_chain_reliability.svg"
+      - "results/figures/mission_chain_sensitivity.svg"
+      - "results/figures/engine_cluster_reliability.svg"
+    responsibilities:
+      - "建立发动机簇可靠性模型。"
+      - "建立两发全成功与三发 2-out-of-3 任务可靠性模型；三发仅作为敏感性扩展。"
+      - "建立两发 LEO 对接 TLI 总可靠性链。"
+      - "做单发可靠性和单发动机可靠性的敏感性分析。"
+
+  - id: D_transfer
+    name: "地月转移智能体"
+    workspace: "agents/D_transfer"
+    owns:
+      - "src/transfer.py"
+      - "src/mass_budget.py"
+      - "results/tables/delta_v_budget.csv"
+      - "results/tables/tli_mass_budget.csv"
+      - "results/figures/tli_delta_v.svg"
+      - "results/figures/tli_mass_budget.svg"
+    responsibilities:
+      - "计算 LEO 停泊轨道到 TLI 的 Hohmann 型速度增量。"
+      - "比较停泊轨道高度对 TLI Delta-v 和转移时间的影响。"
+      - "估算 LEO 组合体执行 TLI 所需推进剂和湿质量。"
+
+  - id: E_launch_geometry
+    name: "发射几何智能体"
+    workspace: "agents/E_launch_geometry"
+    owns:
+      - "src/launch_geometry.py"
+      - "results/tables/launch_geometry.csv"
+      - "results/figures/launch_geometry.svg"
+    responsibilities:
+      - "计算文昌地球自转速度收益。"
+      - "扫描发射方位角与入轨倾角的近似关系。"
+
+  - id: F_ascent
+    name: "上升段仿真智能体"
+    workspace: "agents/F_ascent"
+    owns:
+      - "src/atmosphere.py"
+      - "src/frames.py"
+      - "src/ascent_3dof.py"
+      - "src/ascent_eci.py"
+      - "results/trajectories/ascent_baseline.csv"
+      - "results/trajectories/ascent_eci_baseline.csv"
+      - "results/tables/gravity_model_comparison.csv"
+    responsibilities:
+      - "实现上升段基础代理仿真、程序角、阻力、动压和分级质量变化。"
+      - "实现 ECI 三维点质点上升段积分和 J2 选项。"
+      - "比较球形引力和 J2 对末端状态的影响。"
+    status: "active_v0.6"
+
+  - id: G_optimization
+    name: "优化智能体"
+    workspace: "agents/G_optimization"
+    owns:
+      - "src/objectives.py"
+      - "src/optimize.py"
+      - "results/tables/optimization_summary.csv"
+    responsibilities:
+      - "实现网格搜索、目标函数和敏感性分析。"
+    status: "active_v0.6"
+
+  - id: H_review
+    name: "审查复现智能体"
+    workspace: "agents/H_review"
+    owns:
+      - "src/self_check.py"
+    responsibilities:
+      - "运行公式自检。"
+      - "检查单位、边界条件、结果文件是否可复现。"

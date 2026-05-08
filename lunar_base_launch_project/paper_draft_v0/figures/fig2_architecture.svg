@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#263238"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17212b; }
+      .title { font-size: 24px; font-weight: 700; }
+      .subtitle { font-size: 14px; fill: #4b5b66; }
+      .box-title { font-size: 16px; font-weight: 700; }
+      .box-text { font-size: 13px; fill: #394955; }
+      .small { font-size: 12px; fill: #52636f; }
+      .box { fill: #ffffff; stroke: #263238; stroke-width: 1.8; rx: 8; }
+      .launch { fill: #eef7ff; }
+      .orbit { fill: #f4fbf1; }
+      .dock { fill: #fff7e8; }
+      .tli { fill: #f4f1ff; }
+      .arrow { stroke: #263238; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .soft-arrow { stroke: #5c6c78; stroke-width: 1.7; fill: none; marker-end: url(#arrow); stroke-dasharray: 7 6; }
+      .orbit-line { stroke: #8aa0ad; stroke-width: 1.4; fill: none; stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="620" fill="#ffffff"/>
+  <text x="600" y="42" text-anchor="middle" class="title">Two-Launch Long March 10 LEO Rendezvous Architecture</text>
+  <text x="600" y="66" text-anchor="middle" class="subtitle">Two modular cargo launches assemble a 40 t logistics stack in LEO before translunar injection</text>
+
+  <ellipse cx="610" cy="322" rx="310" ry="126" class="orbit-line"/>
+  <text x="610" y="465" text-anchor="middle" class="small">LEO parking / phasing region</text>
+
+  <rect x="56" y="140" width="210" height="92" class="box launch"/>
+  <text x="161" y="168" text-anchor="middle" class="box-title">Launch 1</text>
+  <text x="161" y="193" text-anchor="middle" class="box-text">Long March 10</text>
+  <text x="161" y="214" text-anchor="middle" class="box-text">Cargo Module A</text>
+
+  <rect x="56" y="390" width="210" height="92" class="box launch"/>
+  <text x="161" y="418" text-anchor="middle" class="box-title">Launch 2</text>
+  <text x="161" y="443" text-anchor="middle" class="box-text">Long March 10</text>
+  <text x="161" y="464" text-anchor="middle" class="box-text">Cargo Module B</text>
+
+  <rect x="345" y="130" width="240" height="116" class="box orbit"/>
+  <text x="465" y="160" text-anchor="middle" class="box-title">Module A in LEO</text>
+  <text x="465" y="187" text-anchor="middle" class="box-text">Target parking orbit</text>
+  <text x="465" y="209" text-anchor="middle" class="box-text">~20 t cargo module</text>
+  <text x="465" y="230" text-anchor="middle" class="small">baseline target: 300 km</text>
+
+  <rect x="345" y="382" width="240" height="116" class="box orbit"/>
+  <text x="465" y="412" text-anchor="middle" class="box-title">Module B in LEO</text>
+  <text x="465" y="439" text-anchor="middle" class="box-text">Phasing orbit</text>
+  <text x="465" y="461" text-anchor="middle" class="box-text">~20 t cargo module</text>
+  <text x="465" y="482" text-anchor="middle" class="small">example phasing orbit: 260 km</text>
+
+  <rect x="690" y="252" width="235" height="126" class="box dock"/>
+  <text x="807.5" y="283" text-anchor="middle" class="box-title">LEO Rendezvous</text>
+  <text x="807.5" y="309" text-anchor="middle" class="box-text">Phasing and docking</text>
+  <text x="807.5" y="331" text-anchor="middle" class="box-text">example wait time: 18.5 h</text>
+  <text x="807.5" y="353" text-anchor="middle" class="box-text">rendezvous delta-v: ~43 m/s</text>
+
+  <rect x="980" y="252" width="170" height="126" class="box tli"/>
+  <text x="1065" y="282" text-anchor="middle" class="box-title">Combined Stack</text>
+  <text x="1065" y="308" text-anchor="middle" class="box-text">40 t cargo</text>
+  <text x="1065" y="330" text-anchor="middle" class="box-text">+ docking/TLI stage</text>
+  <text x="1065" y="352" text-anchor="middle" class="small">TLI delta-v ~3.108 km/s</text>
+
+  <path d="M 266 186 C 302 186, 312 188, 345 188" class="arrow"/>
+  <path d="M 266 436 C 302 436, 312 440, 345 440" class="arrow"/>
+  <path d="M 585 188 C 642 198, 666 239, 690 291" class="arrow"/>
+  <path d="M 585 440 C 642 426, 666 386, 690 340" class="arrow"/>
+  <path d="M 925 315 L 980 315" class="arrow"/>
+
+  <path d="M 1150 315 C 1184 315, 1190 260, 1160 220" class="soft-arrow"/>
+  <text x="1090" y="214" text-anchor="middle" class="small">Earth-Moon transfer orbit</text>
+
+  <line x1="730" y1="506" x2="920" y2="506" stroke="#263238" stroke-width="1.5"/>
+  <text x="825" y="530" text-anchor="middle" class="small">Reliability chain: R_total = R_launch^2 * R_rendezvous * R_TLI</text>
+</svg>

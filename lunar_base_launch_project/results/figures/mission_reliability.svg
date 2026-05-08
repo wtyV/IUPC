@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="380.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">Mission reliability for modular CZ-10 architectures</text>
+<line x1="78" y1="54" x2="78" y2="390" stroke="#222" stroke-width="1.2"/>
+<line x1="78" y1="390" x2="736" y2="390" stroke="#222" stroke-width="1.2"/>
+<line x1="78.0" y1="390" x2="78.0" y2="395" stroke="#222"/>
+<text x="78.0" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.85</text>
+<line x1="73" y1="390.0" x2="78" y2="390.0" stroke="#222"/>
+<text x="68" y="394.0" text-anchor="end" font-family="Arial" font-size="11">0.722</text>
+<line x1="78" y1="390.0" x2="736" y2="390.0" stroke="#e6e6e6"/>
+<line x1="209.6" y1="390" x2="209.6" y2="395" stroke="#222"/>
+<text x="209.6" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.879</text>
+<line x1="73" y1="322.8" x2="78" y2="322.8" stroke="#222"/>
+<text x="68" y="326.8" text-anchor="end" font-family="Arial" font-size="11">0.778</text>
+<line x1="78" y1="322.8" x2="736" y2="322.8" stroke="#e6e6e6"/>
+<line x1="341.2" y1="390" x2="341.2" y2="395" stroke="#222"/>
+<text x="341.2" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.908</text>
+<line x1="73" y1="255.6" x2="78" y2="255.6" stroke="#222"/>
+<text x="68" y="259.6" text-anchor="end" font-family="Arial" font-size="11">0.833</text>
+<line x1="78" y1="255.6" x2="736" y2="255.6" stroke="#e6e6e6"/>
+<line x1="472.8" y1="390" x2="472.8" y2="395" stroke="#222"/>
+<text x="472.8" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.937</text>
+<line x1="73" y1="188.4" x2="78" y2="188.4" stroke="#222"/>
+<text x="68" y="192.4" text-anchor="end" font-family="Arial" font-size="11">0.889</text>
+<line x1="78" y1="188.4" x2="736" y2="188.4" stroke="#e6e6e6"/>
+<line x1="604.4" y1="390" x2="604.4" y2="395" stroke="#222"/>
+<text x="604.4" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.966</text>
+<line x1="73" y1="121.2" x2="78" y2="121.2" stroke="#222"/>
+<text x="68" y="125.2" text-anchor="end" font-family="Arial" font-size="11">0.944</text>
+<line x1="78" y1="121.2" x2="736" y2="121.2" stroke="#e6e6e6"/>
+<line x1="736.0" y1="390" x2="736.0" y2="395" stroke="#222"/>
+<text x="736.0" y="412" text-anchor="middle" font-family="Arial" font-size="11">0.995</text>
+<line x1="73" y1="54.0" x2="78" y2="54.0" stroke="#222"/>
+<text x="68" y="58.0" text-anchor="end" font-family="Arial" font-size="11">1</text>
+<line x1="78" y1="54.0" x2="736" y2="54.0" stroke="#e6e6e6"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2.3" points="78.0,390.0 123.4,369.3 168.8,348.3 214.1,327.1 259.5,305.7 304.9,284.0 350.3,262.1 395.7,239.9 441.0,217.5 486.4,194.9 531.8,172.0 577.2,148.9 622.6,125.5 667.9,101.9 713.3,78.0 736.0,66.0"/>
+<polyline fill="none" stroke="#d62728" stroke-width="2.3" points="78.0,127.5 123.4,118.5 168.8,110.0 214.1,102.0 259.5,94.6 304.9,87.8 350.3,81.6 395.7,75.9 441.0,70.9 486.4,66.5 531.8,62.7 577.2,59.6 622.6,57.1 667.9,55.3 713.3,54.3 736.0,54.0"/>
+<line x1="86" y1="72" x2="110" y2="72" stroke="#1f77b4" stroke-width="2.6"/>
+<text x="118" y="76" font-family="Arial" font-size="12">Two launches, both required</text>
+<line x1="86" y1="92" x2="110" y2="92" stroke="#d62728" stroke-width="2.6"/>
+<text x="118" y="96" font-family="Arial" font-size="12">Three launches, at least two required</text>
+<text x="380.0" y="442" text-anchor="middle" font-family="Arial" font-size="13">Single-launch reliability</text>
+<text transform="translate(18 230.0) rotate(-90)" text-anchor="middle" font-family="Arial" font-size="13">Mission success probability</text>
+</svg>

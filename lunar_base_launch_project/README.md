@@ -1,0 +1,87 @@
+# Lunar Base Launch Project v0.6
+
+本目录是 Problem B: Lunar Base Construction 的第一版建模与代码工作区。
+
+当前 v0.6 的目标不是写最终论文，而是先完成一个可检查、可复现的基础闭环：
+
+- 建立 40 t 地月转移轨道投送任务的数学物理模型。
+- 建立多智能体分工、输入输出和交接协议。
+- 实现第一版 Python 计算代码。
+- 输出基线表格和 SVG 图，便于后续写论文和继续优化。
+- 新增上升段基础仿真，输出高度、速度、质量、动压等曲线。
+- 将 Agent A-H 物理化为可见工作目录。
+- 新增 LEO 交会对接、ECI/J2 上升段骨架和粗网格优化。
+- 将 ECI 上升段调参到接近 300 km LEO。
+- 将 LEO 交会对接和 TLI 点火纳入两发主方案总可靠性链。
+- 继续细化 ECI 程序角，使飞行路径角接近 0。
+- 新增 `R_rendezvous` 与 `R_TLI` 的二维敏感性表和图。
+- 新增 LEO 组合体 TLI 质量预算。
+- 新增球形引力与 J2 的上升段末端状态对照。
+
+## 主结论草案
+
+基于公开资料，长征十号登月构型地月转移轨道运力不小于 27 t，因此单发不能直接完成 40 t 载荷投送。若将月球基地原材料视为可拆分模块，推荐采用两发长征十号 LEO 交会对接组合方案：每发约 20 t 载荷模块和对接/转移接口，两个模块先进入近地停泊轨道完成交会对接，再由组合体执行地月转移注入。三发 2-out-of-3 方案只作为可靠性扩展和敏感性对照。
+
+## 目录
+
+```text
+lunar_base_launch_project
+├── agents
+│   ├── agent_registry.yaml
+│   ├── A_problem_sources
+│   ├── B_architecture
+│   ├── C_reliability
+│   ├── D_transfer
+│   ├── E_launch_geometry
+│   ├── F_ascent
+│   ├── G_optimization
+│   ├── H_review
+│   └── workflow.md
+├── docs
+│   ├── assumptions_and_sources.md
+│   ├── modeling_v0.md
+│   └── next_steps.md
+├── results
+│   ├── figures
+│   ├── tables
+│   └── trajectories
+└── src
+    ├── architecture.py
+    ├── ascent_3dof.py
+    ├── ascent_eci.py
+    ├── atmosphere.py
+    ├── constants.py
+    ├── frames.py
+    ├── launch_geometry.py
+    ├── mass_budget.py
+    ├── mission_data.py
+    ├── objectives.py
+    ├── optimize.py
+    ├── reliability.py
+    ├── rendezvous.py
+    ├── run_baseline.py
+    ├── self_check.py
+    ├── svg_charts.py
+    └── transfer.py
+```
+
+## 运行方式
+
+在本目录运行：
+
+```powershell
+python .\src\run_baseline.py
+python .\src\self_check.py
+```
+
+输出结果会写到：
+
+- `results/tables/*.csv`
+- `results/tables/baseline_summary.json`
+- `results/tables/mission_chain_reliability.csv`
+- `results/tables/mission_chain_sensitivity.csv`
+- `results/tables/tli_mass_budget.csv`
+- `results/tables/gravity_model_comparison.csv`
+- `results/figures/*.svg`
+- `results/trajectories/ascent_baseline.csv`
+- `results/trajectories/ascent_eci_baseline.csv`

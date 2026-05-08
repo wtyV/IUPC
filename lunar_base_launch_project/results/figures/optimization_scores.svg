@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="380.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700">v0.6 grid-search objective scores</text>
+<line x1="78" y1="54" x2="78" y2="390" stroke="#222" stroke-width="1.2"/>
+<line x1="78" y1="390" x2="736" y2="390" stroke="#222" stroke-width="1.2"/>
+<line x1="78.0" y1="390" x2="78.0" y2="395" stroke="#222"/>
+<text x="78.0" y="412" text-anchor="middle" font-family="Arial" font-size="11">1</text>
+<line x1="73" y1="390.0" x2="78" y2="390.0" stroke="#222"/>
+<text x="68" y="394.0" text-anchor="end" font-family="Arial" font-size="11">0.00489</text>
+<line x1="78" y1="390.0" x2="736" y2="390.0" stroke="#e6e6e6"/>
+<line x1="209.6" y1="390" x2="209.6" y2="395" stroke="#222"/>
+<text x="209.6" y="412" text-anchor="middle" font-family="Arial" font-size="11">2.8</text>
+<line x1="73" y1="322.8" x2="78" y2="322.8" stroke="#222"/>
+<text x="68" y="326.8" text-anchor="end" font-family="Arial" font-size="11">0.891</text>
+<line x1="78" y1="322.8" x2="736" y2="322.8" stroke="#e6e6e6"/>
+<line x1="341.2" y1="390" x2="341.2" y2="395" stroke="#222"/>
+<text x="341.2" y="412" text-anchor="middle" font-family="Arial" font-size="11">4.6</text>
+<line x1="73" y1="255.6" x2="78" y2="255.6" stroke="#222"/>
+<text x="68" y="259.6" text-anchor="end" font-family="Arial" font-size="11">1.78</text>
+<line x1="78" y1="255.6" x2="736" y2="255.6" stroke="#e6e6e6"/>
+<line x1="472.8" y1="390" x2="472.8" y2="395" stroke="#222"/>
+<text x="472.8" y="412" text-anchor="middle" font-family="Arial" font-size="11">6.4</text>
+<line x1="73" y1="188.4" x2="78" y2="188.4" stroke="#222"/>
+<text x="68" y="192.4" text-anchor="end" font-family="Arial" font-size="11">2.66</text>
+<line x1="78" y1="188.4" x2="736" y2="188.4" stroke="#e6e6e6"/>
+<line x1="604.4" y1="390" x2="604.4" y2="395" stroke="#222"/>
+<text x="604.4" y="412" text-anchor="middle" font-family="Arial" font-size="11">8.2</text>
+<line x1="73" y1="121.2" x2="78" y2="121.2" stroke="#222"/>
+<text x="68" y="125.2" text-anchor="end" font-family="Arial" font-size="11">3.55</text>
+<line x1="78" y1="121.2" x2="736" y2="121.2" stroke="#e6e6e6"/>
+<line x1="736.0" y1="390" x2="736.0" y2="395" stroke="#222"/>
+<text x="736.0" y="412" text-anchor="middle" font-family="Arial" font-size="11">10</text>
+<line x1="73" y1="54.0" x2="78" y2="54.0" stroke="#222"/>
+<text x="68" y="58.0" text-anchor="end" font-family="Arial" font-size="11">4.43</text>
+<line x1="78" y1="54.0" x2="736" y2="54.0" stroke="#e6e6e6"/>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2.3" points="78.0,197.1 151.1,170.7 224.2,147.3 297.3,135.0 370.4,122.8 443.6,104.0 516.7,87.1 589.8,86.5 662.9,85.8 736.0,54.0"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2.3" points="78.0,340.1 151.1,340.0 224.2,340.0 297.3,340.0 370.4,339.9 443.6,339.9 516.7,331.4 589.8,331.2 662.9,331.2 736.0,331.0"/>
+<polyline fill="none" stroke="#9467bd" stroke-width="2.3" points="78.0,390.0 151.1,389.7 224.2,389.6 297.3,389.6 370.4,389.5 443.6,389.4 516.7,389.3 589.8,389.2 662.9,388.6 736.0,388.5"/>
+<line x1="86" y1="72" x2="110" y2="72" stroke="#2ca02c" stroke-width="2.6"/>
+<text x="118" y="76" font-family="Arial" font-size="12">Ascent pitch score</text>
+<line x1="86" y1="92" x2="110" y2="92" stroke="#ff7f0e" stroke-width="2.6"/>
+<text x="118" y="96" font-family="Arial" font-size="12">LEO rendezvous score</text>
+<line x1="86" y1="112" x2="110" y2="112" stroke="#9467bd" stroke-width="2.6"/>
+<text x="118" y="116" font-family="Arial" font-size="12">ECI ascent pitch score</text>
+<text x="380.0" y="442" text-anchor="middle" font-family="Arial" font-size="13">Candidate rank</text>
+<text transform="translate(18 230.0) rotate(-90)" text-anchor="middle" font-family="Arial" font-size="13">Score</text>
+</svg>

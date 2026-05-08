@@ -1,0 +1,169 @@
+{
+  "recommended_architecture": {
+    "key": "B_two_leo_rendezvous",
+    "feasible_by_mass": true,
+    "launches": 2,
+    "payload_each_t": 20.0,
+    "required_successes": 2,
+    "required_delivered_t": 40.0,
+    "delivered_if_required_successes_t": 40.0,
+    "delivered_if_all_success_t": 40.0,
+    "margin_each_t": 7.0,
+    "mission_reliability_at_095": 0.9025,
+    "rendezvous_location": "LEO",
+    "transfer_strategy": "LEO docking followed by combined TLI",
+    "note": "Recommended baseline architecture."
+  },
+  "mission_chain_reliability_at_launch_095": {
+    "single_launch_reliability": 0.95,
+    "rendezvous_reliability": 0.98,
+    "tli_reliability": 0.985,
+    "two_launch_only": 0.9025,
+    "two_launch_leo_rendezvous_tli": 0.87118325
+  },
+  "mission_chain_sensitivity_best": {
+    "single_launch_reliability": 0.95,
+    "rendezvous_reliability": 0.995,
+    "tli_reliability": 0.995,
+    "mission_reliability": 0.8934975624999999
+  },
+  "mission_chain_sensitivity_worst": {
+    "single_launch_reliability": 0.95,
+    "rendezvous_reliability": 0.94,
+    "tli_reliability": 0.94,
+    "mission_reliability": 0.7974489999999999
+  },
+  "tli_estimate_at_300_km": {
+    "leo_altitude_km": 300.0,
+    "leo_circular_speed_km_s": 7.729891847355843,
+    "transfer_perigee_speed_km_s": 10.838078665848379,
+    "delta_v_tli_km_s": 3.108186818492537,
+    "time_of_flight_days": 4.979728516982404
+  },
+  "nominal_tli_mass_budget": {
+    "leo_altitude_km": 300.0,
+    "delivered_cargo_t": 40.0,
+    "adapter_and_docking_t": 4.0,
+    "tli_stage_isp_s": 450.0,
+    "tli_stage_structural_fraction": 0.08,
+    "tli_delta_v_km_s": 3.108186818492537,
+    "mass_ratio": 2.0224837423131765,
+    "tli_propellant_t": 48.997191173274466,
+    "tli_stage_dry_t": 3.9197752938619574,
+    "initial_leo_stack_t": 96.91696646713643,
+    "leo_wet_mass_per_launch_t": 48.45848323356822,
+    "simulated_terminal_mass_per_launch_t": 69.0,
+    "simulated_margin_per_launch_t": 20.541516766431783,
+    "public_direct_tli_capacity_t": 27.0,
+    "direct_tli_margin_for_20t_module_t": 7.0
+  },
+  "gravity_model_j2_minus_spherical": {
+    "gravity_model": "j2_minus_spherical",
+    "terminal_altitude_km": -2.2706877886075745,
+    "terminal_inertial_speed_m_s": 1.3733890224457355,
+    "terminal_fpa_deg": -0.05090419286289379,
+    "terminal_mass_t": 0.0,
+    "max_dynamic_pressure_kpa": -0.0001276185969700805
+  },
+  "leo_rendezvous_recommended": {
+    "target_altitude_km": 300.0,
+    "phasing_altitude_km": 260.0,
+    "phase_angle_deg": 40.0,
+    "relative_drift_deg_per_hour": 2.165876199208935,
+    "wait_time_hours": 18.468276263717016,
+    "transfer_delta_v_m_s": 23.279300929555575,
+    "total_rendezvous_delta_v_m_s": 43.279300929555575,
+    "note": "Lower phasing orbit catches up."
+  },
+  "wenchang_rotation_speed_m_s": 437.6236215964517,
+  "east_launch_geometry": {
+    "launch_azimuth_deg": 90.0,
+    "approximate_inclination_deg": 19.614000000000004,
+    "eastward_rotation_gain_m_s": 437.6236215964517
+  },
+  "ascent_proxy_terminal": {
+    "time_s": 656.9306277027024,
+    "downrange_km": 1796.0101437679966,
+    "altitude_km": 343.35160836776214,
+    "horizontal_velocity_m_s": 7252.5037183617305,
+    "vertical_velocity_m_s": -1242.1139287168437,
+    "speed_m_s": 7358.101466870589,
+    "flight_path_angle_deg": -9.7185804332107,
+    "pitch_deg": 0.0,
+    "mass_t": 69.00000000000628,
+    "dynamic_pressure_kpa": 0.0,
+    "stage": "third_stage_proxy"
+  },
+  "ascent_proxy_max_dynamic_pressure_kpa": 21.610405437587247,
+  "ascent_eci_terminal": {
+    "time_s": 656.9306277027024,
+    "x_km": -4011.7185185019207,
+    "y_km": 4874.388081050059,
+    "z_km": 2177.200675689919,
+    "vx_m_s": -6051.407068237056,
+    "vy_m_s": -4776.266511288525,
+    "vz_m_s": -466.22863423285213,
+    "altitude_km": 306.85500131582376,
+    "speed_m_s": 7246.525502483881,
+    "inertial_speed_m_s": 7723.3165435416595,
+    "flight_path_angle_deg": -0.022116205669020138,
+    "pitch_deg": 10.0,
+    "mass_t": 69.00000000000628,
+    "dynamic_pressure_kpa": 0.0,
+    "stage": "third_stage_proxy"
+  },
+  "ascent_eci_max_dynamic_pressure_kpa": 21.87760503848966,
+  "best_ascent_pitch_candidate": {
+    "category": "ascent_pitch",
+    "rank": 1,
+    "parameter_1": "pitch_end_time_s",
+    "value_1": 400.0,
+    "parameter_2": "final_pitch_deg",
+    "value_2": 8.0,
+    "parameter_3": "",
+    "value_3": "",
+    "metric_1": "terminal_altitude_km",
+    "metric_value_1": 362.707618027254,
+    "metric_2": "terminal_speed_m_s",
+    "metric_value_2": 7334.8903831933185,
+    "score": 2.547031370337658
+  },
+  "best_eci_ascent_pitch_candidate": {
+    "category": "eci_ascent_pitch",
+    "rank": 1,
+    "parameter_1": "pitch_end_time_s",
+    "value_1": 305.0,
+    "parameter_2": "final_pitch_deg",
+    "value_2": 10.0,
+    "parameter_3": "shape",
+    "value_3": 1.4,
+    "metric_1": "terminal_altitude_km",
+    "metric_value_1": 306.85500131582376,
+    "metric_2": "terminal_inertial_speed_m_s",
+    "metric_value_2": 7723.3165435416595,
+    "score": 0.0048916078471175515
+  },
+  "best_rendezvous_optimization_candidate": {
+    "category": "leo_rendezvous",
+    "rank": 1,
+    "parameter_1": "target_altitude_km",
+    "value_1": 280.0,
+    "parameter_2": "phasing_altitude_km",
+    "value_2": 240.0,
+    "parameter_3": "",
+    "value_3": "",
+    "metric_1": "wait_time_hours",
+    "metric_value_1": 18.329749426463717,
+    "metric_2": "total_delta_v_m_s",
+    "metric_value_2": 43.38470110173057,
+    "score": 0.6629688788481022
+  },
+  "vehicle": {
+    "name": "Long March 10 lunar configuration",
+    "height_m": 92.5,
+    "liftoff_mass_t": 2189.0,
+    "liftoff_thrust_tf": 2678.0,
+    "tli_capacity_t": 27.0,
+    "first_stage_engine_count_assumed": 21
+  }
+}

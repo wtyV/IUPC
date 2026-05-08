@@ -1,0 +1,5 @@
+key,feasible_by_mass,launches,payload_each_t,required_successes,required_delivered_t,delivered_if_required_successes_t,delivered_if_all_success_t,margin_each_t,mission_reliability_at_095,rendezvous_location,transfer_strategy,note
+A_single_direct,False,1,40.0,1,40.0,40.0,40.0,-13.0,0.95,none,direct TLI attempt,Rejected: payload exceeds public TLI capacity per launch.
+B_two_leo_rendezvous,True,2,20.0,2,40.0,40.0,40.0,7.0,0.9025,LEO,LEO docking followed by combined TLI,Recommended baseline architecture.
+C_three_2of3_reliability_extension,True,3,20.0,2,40.0,40.0,60.0,7.0,0.99275,LEO or separate TLI,reliability extension only,"Reliability extension, not the baseline because it adds a third launch."
+D_single_body_leo_assembly,True,3,0.0,3,40.0,40.0,40.0,0.0,0.8573749999999999,LEO,single-body payload plus external TLI propulsion,Backup only: needed if the 40 t payload cannot be split into modules.
