@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+  <defs>
+    <marker id="arrow-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#738391"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#6f4aa8"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#17212b" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17212b; }
+      .title { font-size: 28px; font-weight: 700; }
+      .subtitle { font-size: 15px; fill: #5e6b76; }
+      .section { font-size: 18px; font-weight: 700; }
+      .label { font-size: 15px; font-weight: 700; }
+      .body { font-size: 15px; fill: #31404c; }
+      .small { font-size: 13px; fill: #5e6b76; }
+      .tiny { font-size: 11px; fill: #5e6b76; }
+      .tiny-white { font-size: 10px; fill: #ffffff; font-weight: 700; }
+      .metric { font-size: 30px; font-weight: 700; }
+      .mono { font-size: 14px; font-family: Consolas, Menlo, monospace; fill: #31404c; }
+      .step { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .table-head { font-size: 14px; font-weight: 700; fill: #44525e; }
+      .panel { fill: #ffffff; stroke: #d5dee7; stroke-width: 1.3; filter: url(#soft-shadow); }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f3f6fa"/>
+<text x="750.0" y="54.0" class="title" text-anchor="middle">Enhanced Fig. 1: Architecture Trade Matrix</text>
+<text x="750.0" y="82.0" class="subtitle" text-anchor="middle">A UPC-style figure should show not only the selected answer but also why competing interpretations were rejected or retained.</text>
+<rect x="54" y="116" width="1392" height="650" rx="18" class="panel"/>
+<text x="86.0" y="160.0" class="table-head" text-anchor="start">Architecture</text>
+<text x="386.0" y="160.0" class="table-head" text-anchor="start">Role</text>
+<text x="580.0" y="160.0" class="table-head" text-anchor="start">Launches</text>
+<text x="740.0" y="160.0" class="table-head" text-anchor="start">Mass margin</text>
+<text x="950.0" y="160.0" class="table-head" text-anchor="start">Reliability metric</text>
+<text x="1140.0" y="160.0" class="table-head" text-anchor="start">Decision reason</text>
+<line x1="82" y1="184" x2="1418" y2="184" stroke="#b9c5cf" stroke-width="1.4"/>
+<rect x="78" y="190" width="1340" height="104" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<rect x="78" y="190" width="8" height="104" rx="4" fill="#c84630"/>
+<text x="102.0" y="222.0" class="label" text-anchor="start">A. Single direct TLI</text>
+<text x="102.0" y="250.0" class="small" text-anchor="start">Reject</text>
+<rect x="386" y="202" width="110" height="34" rx="17" fill="#c84630" opacity="0.13" stroke="#c84630"/>
+<text x="441.0" y="224.0" class="small" text-anchor="middle">Reject</text>
+<path d="M 589.1 203.0 C 594.1 207.8, 594.1 214.4, 591.7 229.0 L 586.4 229.0 C 584.0 214.4, 584.0 207.8, 589.1 203.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="586.4" y="215.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="589.1" cy="211.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 586.2 229.0 L 584.3 234.5 L 587.8 229.0 Z" fill="#5e6b76"/>
+<path d="M 591.9 229.0 L 593.8 234.5 L 590.3 229.0 Z" fill="#5e6b76"/>
+<path d="M 587.6 229.8 C 589.1 235.1, 590.5 229.8, 589.1 237.3 Z" fill="#f4a340" opacity="0.8"/>
+<rect x="740" y="210" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="740" y="210" width="0.0" height="18" rx="9.0" fill="#c84630"/>
+<text x="748.0" y="252.0" class="small" text-anchor="start">-13.0 t per launch</text>
+<rect x="950" y="210" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="950" y="210" width="142.5" height="18" rx="9.0" fill="#c84630"/>
+<text x="958.0" y="252.0" class="small" text-anchor="start">0.950</text>
+<text x="1140.0" y="203.0" class="small" text-anchor="start">40 t exceeds public 27 t TLI</text>
+<text x="1140.0" y="221.0" class="small" text-anchor="start">capability</text>
+<rect x="78" y="318" width="1340" height="104" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<rect x="78" y="318" width="8" height="104" rx="4" fill="#2e8b57"/>
+<text x="102.0" y="350.0" class="label" text-anchor="start">B. Two-launch LEO assembly</text>
+<text x="102.0" y="378.0" class="small" text-anchor="start">Baseline</text>
+<rect x="386" y="330" width="110" height="34" rx="17" fill="#2e8b57" opacity="0.13" stroke="#2e8b57"/>
+<text x="441.0" y="352.0" class="small" text-anchor="middle">Baseline</text>
+<path d="M 589.1 331.0 C 594.1 335.8, 594.1 342.4, 591.7 357.0 L 586.4 357.0 C 584.0 342.4, 584.0 335.8, 589.1 331.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="586.4" y="343.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="589.1" cy="339.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 586.2 357.0 L 584.3 362.5 L 587.8 357.0 Z" fill="#5e6b76"/>
+<path d="M 591.9 357.0 L 593.8 362.5 L 590.3 357.0 Z" fill="#5e6b76"/>
+<path d="M 587.6 357.8 C 589.1 363.1, 590.5 357.8, 589.1 365.3 Z" fill="#f4a340" opacity="0.8"/>
+<path d="M 614.1 331.0 C 619.1 335.8, 619.1 342.4, 616.7 357.0 L 611.4 357.0 C 609.0 342.4, 609.0 335.8, 614.1 331.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="611.4" y="343.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="614.1" cy="339.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 611.2 357.0 L 609.3 362.5 L 612.8 357.0 Z" fill="#5e6b76"/>
+<path d="M 616.9 357.0 L 618.8 362.5 L 615.3 357.0 Z" fill="#5e6b76"/>
+<path d="M 612.6 357.8 C 614.1 363.1, 615.5 357.8, 614.1 365.3 Z" fill="#f4a340" opacity="0.8"/>
+<rect x="740" y="338" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="740" y="338" width="136.4" height="18" rx="9.0" fill="#2e8b57"/>
+<text x="748.0" y="380.0" class="small" text-anchor="start">+7.0 t per launch</text>
+<rect x="950" y="338" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="950" y="338" width="130.7" height="18" rx="9.0" fill="#2e8b57"/>
+<text x="958.0" y="380.0" class="small" text-anchor="start">0.871</text>
+<text x="1140.0" y="331.0" class="small" text-anchor="start">Minimum launches; modular 40 t</text>
+<text x="1140.0" y="349.0" class="small" text-anchor="start">cargo assembled in LEO</text>
+<rect x="78" y="446" width="1340" height="104" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<rect x="78" y="446" width="8" height="104" rx="4" fill="#d9822b"/>
+<text x="102.0" y="478.0" class="label" text-anchor="start">C. Three-launch 2-of-3</text>
+<text x="102.0" y="506.0" class="small" text-anchor="start">Reliability extension</text>
+<rect x="386" y="458" width="196" height="34" rx="17" fill="#d9822b" opacity="0.13" stroke="#d9822b"/>
+<text x="484.0" y="480.0" class="small" text-anchor="middle">Reliability extension</text>
+<path d="M 589.1 459.0 C 594.1 463.8, 594.1 470.4, 591.7 485.0 L 586.4 485.0 C 584.0 470.4, 584.0 463.8, 589.1 459.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="586.4" y="471.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="589.1" cy="467.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 586.2 485.0 L 584.3 490.5 L 587.8 485.0 Z" fill="#5e6b76"/>
+<path d="M 591.9 485.0 L 593.8 490.5 L 590.3 485.0 Z" fill="#5e6b76"/>
+<path d="M 587.6 485.8 C 589.1 491.1, 590.5 485.8, 589.1 493.3 Z" fill="#f4a340" opacity="0.8"/>
+<path d="M 614.1 459.0 C 619.1 463.8, 619.1 470.4, 616.7 485.0 L 611.4 485.0 C 609.0 470.4, 609.0 463.8, 614.1 459.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="611.4" y="471.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="614.1" cy="467.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 611.2 485.0 L 609.3 490.5 L 612.8 485.0 Z" fill="#5e6b76"/>
+<path d="M 616.9 485.0 L 618.8 490.5 L 615.3 485.0 Z" fill="#5e6b76"/>
+<path d="M 612.6 485.8 C 614.1 491.1, 615.5 485.8, 614.1 493.3 Z" fill="#f4a340" opacity="0.8"/>
+<path d="M 639.1 459.0 C 644.1 463.8, 644.1 470.4, 641.7 485.0 L 636.4 485.0 C 634.0 470.4, 634.0 463.8, 639.1 459.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="636.4" y="471.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="639.1" cy="467.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 636.2 485.0 L 634.3 490.5 L 637.8 485.0 Z" fill="#5e6b76"/>
+<path d="M 641.9 485.0 L 643.8 490.5 L 640.3 485.0 Z" fill="#5e6b76"/>
+<path d="M 637.6 485.8 C 639.1 491.1, 640.5 485.8, 639.1 493.3 Z" fill="#f4a340" opacity="0.8"/>
+<rect x="740" y="466" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="740" y="466" width="136.4" height="18" rx="9.0" fill="#2e8b57"/>
+<text x="748.0" y="508.0" class="small" text-anchor="start">+7.0 t per launch</text>
+<rect x="950" y="466" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="950" y="466" width="148.9" height="18" rx="9.0" fill="#d9822b"/>
+<text x="958.0" y="508.0" class="small" text-anchor="start">0.993</text>
+<text x="1140.0" y="459.0" class="small" text-anchor="start">Higher reliability but extra</text>
+<text x="1140.0" y="477.0" class="small" text-anchor="start">launch and logistics burden</text>
+<rect x="78" y="574" width="1340" height="104" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<rect x="78" y="574" width="8" height="104" rx="4" fill="#6f4aa8"/>
+<text x="102.0" y="606.0" class="label" text-anchor="start">D. Single-body LEO assembly</text>
+<text x="102.0" y="634.0" class="small" text-anchor="start">Backup</text>
+<rect x="386" y="586" width="110" height="34" rx="17" fill="#6f4aa8" opacity="0.13" stroke="#6f4aa8"/>
+<text x="441.0" y="608.0" class="small" text-anchor="middle">Backup</text>
+<path d="M 589.1 587.0 C 594.1 591.8, 594.1 598.4, 591.7 613.0 L 586.4 613.0 C 584.0 598.4, 584.0 591.8, 589.1 587.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="586.4" y="599.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="589.1" cy="595.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 586.2 613.0 L 584.3 618.5 L 587.8 613.0 Z" fill="#5e6b76"/>
+<path d="M 591.9 613.0 L 593.8 618.5 L 590.3 613.0 Z" fill="#5e6b76"/>
+<path d="M 587.6 613.8 C 589.1 619.1, 590.5 613.8, 589.1 621.3 Z" fill="#f4a340" opacity="0.8"/>
+<path d="M 614.1 587.0 C 619.1 591.8, 619.1 598.4, 616.7 613.0 L 611.4 613.0 C 609.0 598.4, 609.0 591.8, 614.1 587.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="611.4" y="599.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="614.1" cy="595.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 611.2 613.0 L 609.3 618.5 L 612.8 613.0 Z" fill="#5e6b76"/>
+<path d="M 616.9 613.0 L 618.8 618.5 L 615.3 613.0 Z" fill="#5e6b76"/>
+<path d="M 612.6 613.8 C 614.1 619.1, 615.5 613.8, 614.1 621.3 Z" fill="#f4a340" opacity="0.8"/>
+<path d="M 639.1 587.0 C 644.1 591.8, 644.1 598.4, 641.7 613.0 L 636.4 613.0 C 634.0 598.4, 634.0 591.8, 639.1 587.0 Z" fill="#ffffff" stroke="#5e6b76" stroke-width="0.5"/>
+<rect x="636.4" y="599.5" width="5.3" height="7.3" fill="#5e6b76" opacity="0.18"/>
+<circle cx="639.1" cy="595.6" r="1.8" fill="#5e6b76" opacity="0.85"/>
+<path d="M 636.2 613.0 L 634.3 618.5 L 637.8 613.0 Z" fill="#5e6b76"/>
+<path d="M 641.9 613.0 L 643.8 618.5 L 640.3 613.0 Z" fill="#5e6b76"/>
+<path d="M 637.6 613.8 C 639.1 619.1, 640.5 613.8, 639.1 621.3 Z" fill="#f4a340" opacity="0.8"/>
+<rect x="740" y="594" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="740" y="594" width="88.6" height="18" rx="9.0" fill="#d9822b"/>
+<text x="748.0" y="636.0" class="small" text-anchor="start">+0.0 t per launch</text>
+<rect x="950" y="594" width="150" height="18" rx="9.0" fill="#eef2f6"/>
+<rect x="950" y="594" width="128.6" height="18" rx="9.0" fill="#6f4aa8"/>
+<text x="958.0" y="636.0" class="small" text-anchor="start">0.857</text>
+<text x="1140.0" y="587.0" class="small" text-anchor="start">Use only if 40 t cargo cannot be</text>
+<text x="1140.0" y="605.0" class="small" text-anchor="start">split</text>
+<rect x="54" y="792" width="1392" height="58" rx="16" fill="#f6f8fb" stroke="#d9e1e8"/>
+<text x="82.0" y="827.0" class="section" text-anchor="start">Decision</text>
+<text x="176.0" y="827.0" class="body" text-anchor="start">Use the two-launch LEO assembly as the baseline; keep the three-launch case as a sensitivity/reliability extension instead of the main solution.</text>
+</svg>

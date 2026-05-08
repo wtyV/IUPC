@@ -2,7 +2,28 @@
 
 This file maps paper-ready figure/table numbers to generated result files.
 
-## Figures
+## Recommended Enhanced Figures
+
+The enhanced figures are intended for the competition-paper draft. They combine
+multiple numerical results and annotations in one SVG, so they should be used
+before the first-pass single-line plots when writing the paper.
+
+| Paper ID | Title | Source file | Main message |
+|---|---|---|---|
+| Fig. 1 | Architecture trade matrix | `../results/figures/architecture_trade_matrix_enhanced.svg` | Compares rejected, baseline, reliability-extension, and backup architectures in one decision graphic. |
+| Fig. 2 | Two-launch LEO assembly architecture | `figures/fig2_architecture_enhanced.svg` | Shows the complete mission chain: two CZ-10 launches, LEO docking, combined TLI, key masses, and reliability. |
+| Fig. 3 | LEO rendezvous and TLI geometry | `../results/figures/leo_tli_orbit_diagram_enhanced.svg` | Connects phasing orbit design, rendezvous delta-v, TLI delta-v, and transfer time. |
+| Fig. 4 | LEO stack mass flow | `../results/figures/tli_mass_sankey_enhanced.svg` | Explains why the assembled LEO stack is about 96.9 t and where the mass goes during TLI. |
+| Fig. 5 | ECI ascent dashboard | `../results/figures/ascent_dashboard_enhanced.svg` | Combines altitude, inertial speed, dynamic pressure, mass, stage changes, and terminal state. |
+| Fig. 6 | Reliability chain and sensitivity | `../results/figures/reliability_chain_enhanced.svg` | Makes the serial reliability chain and rendezvous/TLI sensitivity explicit. |
+
+PNG previews for quick checking are stored in:
+
+```text
+../results/figures/previews
+```
+
+## First-Pass Figures
 
 | Paper ID | Title | Source file | Main message |
 |---|---|---|---|

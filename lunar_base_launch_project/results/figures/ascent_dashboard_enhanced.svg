@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+  <defs>
+    <marker id="arrow-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#738391"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#6f4aa8"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#17212b" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #17212b; }
+      .title { font-size: 28px; font-weight: 700; }
+      .subtitle { font-size: 15px; fill: #5e6b76; }
+      .section { font-size: 18px; font-weight: 700; }
+      .label { font-size: 15px; font-weight: 700; }
+      .body { font-size: 15px; fill: #31404c; }
+      .small { font-size: 13px; fill: #5e6b76; }
+      .tiny { font-size: 11px; fill: #5e6b76; }
+      .tiny-white { font-size: 10px; fill: #ffffff; font-weight: 700; }
+      .metric { font-size: 30px; font-weight: 700; }
+      .mono { font-size: 14px; font-family: Consolas, Menlo, monospace; fill: #31404c; }
+      .step { font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .table-head { font-size: 14px; font-weight: 700; fill: #44525e; }
+      .panel { fill: #ffffff; stroke: #d5dee7; stroke-width: 1.3; filter: url(#soft-shadow); }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="#f3f6fa"/>
+<text x="750.0" y="54.0" class="title" text-anchor="middle">Enhanced Fig. 6/7: ECI Ascent Dashboard</text>
+<text x="750.0" y="82.0" class="subtitle" text-anchor="middle">A four-panel diagnostic figure is more useful for a competition paper than separate single-line plots.</text>
+<rect x="58" y="116" width="1384" height="744" rx="18" class="panel"/>
+<rect x="96" y="160" width="590" height="258" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<text x="116.0" y="186.0" class="label" text-anchor="start">Altitude profile</text>
+<rect x="154" y="212.74285714285713" width="514" height="9.828571428571422" fill="#e8f5ed" opacity="0.9"/>
+<line x1="154" y1="198.0" x2="668" y2="198.0" stroke="#edf1f4"/>
+<text x="154.0" y="390.0" class="tiny" text-anchor="middle">0.00</text>
+<text x="146.0" y="202.0" class="tiny" text-anchor="end">350</text>
+<line x1="154" y1="241.0" x2="668" y2="241.0" stroke="#edf1f4"/>
+<text x="282.5" y="390.0" class="tiny" text-anchor="middle">164</text>
+<text x="146.0" y="245.0" class="tiny" text-anchor="end">262</text>
+<line x1="154" y1="284.0" x2="668" y2="284.0" stroke="#edf1f4"/>
+<text x="411.0" y="390.0" class="tiny" text-anchor="middle">328</text>
+<text x="146.0" y="288.0" class="tiny" text-anchor="end">175</text>
+<line x1="154" y1="327.0" x2="668" y2="327.0" stroke="#edf1f4"/>
+<text x="539.5" y="390.0" class="tiny" text-anchor="middle">493</text>
+<text x="146.0" y="331.0" class="tiny" text-anchor="end">87.5</text>
+<line x1="154" y1="370.0" x2="668" y2="370.0" stroke="#edf1f4"/>
+<text x="668.0" y="390.0" class="tiny" text-anchor="middle">657</text>
+<text x="146.0" y="374.0" class="tiny" text-anchor="end">0.00</text>
+<line x1="154" y1="198" x2="154" y2="370" stroke="#798996"/>
+<line x1="154" y1="370" x2="668" y2="370" stroke="#798996"/>
+<line x1="283.6" y1="198" x2="283.6" y2="370" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="287.6" y="212.0" class="tiny" text-anchor="start">second stage</text>
+<line x1="459.9" y1="198" x2="459.9" y2="370" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="463.9" y="212.0" class="tiny" text-anchor="start">third stage proxy</text>
+<polyline fill="none" stroke="#2468b4" stroke-width="2.6" points="154.0,370.0 157.9,370.0 161.8,369.9 165.7,369.8 169.6,369.7 173.6,369.5 177.5,369.3 181.4,369.1 185.3,368.8 189.2,368.4 193.1,368.0 197.0,367.5 200.9,366.9 204.9,366.3 208.8,365.6 212.7,364.9 216.6,364.0 220.5,363.0 224.4,362.0 228.3,360.8 232.2,359.6 236.2,358.2 240.1,356.7 244.0,355.1 247.9,353.3 251.8,351.4 255.7,349.3 259.6,347.0 263.5,344.6 267.5,342.0 271.4,339.1 275.3,336.1 279.2,332.8 280.0,332.4 283.6,329.0 287.5,325.7 291.5,322.4 295.4,319.1 299.3,315.8 303.2,312.6 307.1,309.4 311.0,306.2 314.9,303.1 318.8,300.0 322.8,296.9 326.7,293.9 330.6,290.9 334.5,287.9 338.4,285.0 342.3,282.1 346.2,279.3 350.1,276.4 354.0,273.7 358.0,271.0 361.9,268.3 365.8,265.7 369.7,263.1 373.6,260.6 377.5,258.1 381.4,255.7 385.3,253.4 389.3,251.1 393.2,248.9 397.1,246.8 401.0,244.8 404.9,242.8 408.8,240.9 412.7,239.1 416.6,237.3 420.6,235.6 424.5,234.0 428.4,232.4 432.3,230.9 436.2,229.4 440.1,228.0 444.0,226.7 447.9,225.4 451.9,224.2 455.8,223.0 457.3,222.7 459.9,221.8 463.8,220.7 467.7,219.7 471.6,218.8 475.5,217.9 479.4,217.1 483.3,216.3 487.3,215.6 491.2,215.0 495.1,214.4 499.0,213.9 502.9,213.4 506.8,212.9 510.7,212.6 514.6,212.2 518.6,212.0 522.5,211.7 526.4,211.5 530.3,211.4 534.2,211.3 538.1,211.2 542.0,211.2 545.9,211.2 549.9,211.3 553.8,211.4 557.7,211.5 561.6,211.6 565.5,211.8 569.4,212.0 573.3,212.3 577.2,212.5 581.2,212.8 585.1,213.1 589.0,213.4 592.9,213.8 596.8,214.1 600.7,214.5 604.6,214.8 608.5,215.2 612.4,215.6 616.4,215.9 620.3,216.3 624.2,216.7 628.1,217.0 632.0,217.4 635.9,217.7 639.8,218.0 643.7,218.3 647.7,218.5 651.6,218.7 655.5,218.9 659.4,219.1 663.3,219.2 667.2,219.2 668.0,219.2"/>
+<circle cx="668.0" cy="219.2" r="4.5" fill="#2468b4"/>
+<text x="391.0" y="406.0" class="tiny" text-anchor="middle">Time (s)</text>
+<text transform="translate(114.0 289.0) rotate(-90)" class="tiny" text-anchor="middle">Altitude (km)</text>
+<rect x="786" y="160" width="590" height="258" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<text x="806.0" y="186.0" class="label" text-anchor="start">Inertial speed</text>
+<rect x="844" y="205.34146341463415" width="514" height="4.195121951219477" fill="#f7ece8" opacity="0.9"/>
+<line x1="844" y1="198.0" x2="1358" y2="198.0" stroke="#edf1f4"/>
+<text x="844.0" y="390.0" class="tiny" text-anchor="middle">0.00</text>
+<text x="836.0" y="202.0" class="tiny" text-anchor="end">8.20</text>
+<line x1="844" y1="241.0" x2="1358" y2="241.0" stroke="#edf1f4"/>
+<text x="972.5" y="390.0" class="tiny" text-anchor="middle">164</text>
+<text x="836.0" y="245.0" class="tiny" text-anchor="end">6.15</text>
+<line x1="844" y1="284.0" x2="1358" y2="284.0" stroke="#edf1f4"/>
+<text x="1101.0" y="390.0" class="tiny" text-anchor="middle">328</text>
+<text x="836.0" y="288.0" class="tiny" text-anchor="end">4.10</text>
+<line x1="844" y1="327.0" x2="1358" y2="327.0" stroke="#edf1f4"/>
+<text x="1229.5" y="390.0" class="tiny" text-anchor="middle">493</text>
+<text x="836.0" y="331.0" class="tiny" text-anchor="end">2.05</text>
+<line x1="844" y1="370.0" x2="1358" y2="370.0" stroke="#edf1f4"/>
+<text x="1358.0" y="390.0" class="tiny" text-anchor="middle">657</text>
+<text x="836.0" y="374.0" class="tiny" text-anchor="end">0.00</text>
+<line x1="844" y1="198" x2="844" y2="370" stroke="#798996"/>
+<line x1="844" y1="370" x2="1358" y2="370" stroke="#798996"/>
+<line x1="973.6" y1="198" x2="973.6" y2="370" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="977.6" y="212.0" class="tiny" text-anchor="start">second stage</text>
+<line x1="1149.9" y1="198" x2="1149.9" y2="370" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="1153.9" y="212.0" class="tiny" text-anchor="start">third stage proxy</text>
+<polyline fill="none" stroke="#c84630" stroke-width="2.6" points="844.0,360.8 847.9,360.8 851.8,360.8 855.7,360.8 859.6,360.7 863.6,360.7 867.5,360.5 871.4,360.4 875.3,360.2 879.2,360.0 883.1,359.7 887.0,359.3 890.9,358.9 894.9,358.5 898.8,357.9 902.7,357.3 906.6,356.6 910.5,355.9 914.4,355.0 918.3,354.1 922.2,353.1 926.2,352.0 930.1,350.8 934.0,349.4 937.9,348.0 941.8,346.5 945.7,344.8 949.6,343.0 953.5,341.1 957.5,339.0 961.4,336.7 965.3,334.3 969.2,331.7 970.0,331.3 973.6,331.2 977.5,331.1 981.5,330.9 985.4,330.7 989.3,330.5 993.2,330.3 997.1,330.0 1001.0,329.7 1004.9,329.4 1008.8,329.1 1012.8,328.7 1016.7,328.4 1020.6,327.9 1024.5,327.5 1028.4,327.0 1032.3,326.5 1036.2,326.0 1040.1,325.4 1044.0,324.8 1048.0,324.1 1051.9,323.5 1055.8,322.7 1059.7,322.0 1063.6,321.2 1067.5,320.4 1071.4,319.5 1075.3,318.6 1079.3,317.7 1083.2,316.7 1087.1,315.7 1091.0,314.7 1094.9,313.5 1098.8,312.4 1102.7,311.2 1106.6,309.9 1110.6,308.6 1114.5,307.2 1118.4,305.8 1122.3,304.4 1126.2,302.9 1130.1,301.3 1134.0,299.7 1137.9,298.0 1141.9,296.3 1145.8,294.5 1147.3,294.0 1149.9,293.3 1153.8,292.3 1157.7,291.3 1161.6,290.3 1165.5,289.3 1169.4,288.3 1173.3,287.2 1177.3,286.2 1181.2,285.1 1185.1,284.0 1189.0,282.8 1192.9,281.7 1196.8,280.5 1200.7,279.3 1204.6,278.1 1208.6,276.8 1212.5,275.6 1216.4,274.3 1220.3,273.0 1224.2,271.7 1228.1,270.3 1232.0,269.0 1235.9,267.6 1239.9,266.2 1243.8,264.7 1247.7,263.3 1251.6,261.8 1255.5,260.3 1259.4,258.7 1263.3,257.2 1267.2,255.6 1271.2,253.9 1275.1,252.3 1279.0,250.6 1282.9,248.9 1286.8,247.2 1290.7,245.4 1294.6,243.6 1298.5,241.7 1302.4,239.8 1306.4,237.9 1310.3,235.9 1314.2,233.9 1318.1,231.9 1322.0,229.8 1325.9,227.6 1329.8,225.4 1333.7,223.2 1337.7,220.8 1341.6,218.5 1345.5,216.1 1349.4,213.6 1353.3,211.0 1357.2,208.4 1358.0,208.0"/>
+<circle cx="1358.0" cy="208.0" r="4.5" fill="#c84630"/>
+<text x="1081.0" y="406.0" class="tiny" text-anchor="middle">Time (s)</text>
+<text transform="translate(804.0 289.0) rotate(-90)" class="tiny" text-anchor="middle">Speed (km/s)</text>
+<rect x="96" y="504" width="590" height="258" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<text x="116.0" y="530.0" class="label" text-anchor="start">Dynamic pressure</text>
+<line x1="154" y1="542.0" x2="668" y2="542.0" stroke="#edf1f4"/>
+<text x="154.0" y="734.0" class="tiny" text-anchor="middle">0.00</text>
+<text x="146.0" y="546.0" class="tiny" text-anchor="end">24.0</text>
+<line x1="154" y1="585.0" x2="668" y2="585.0" stroke="#edf1f4"/>
+<text x="282.5" y="734.0" class="tiny" text-anchor="middle">164</text>
+<text x="146.0" y="589.0" class="tiny" text-anchor="end">18.0</text>
+<line x1="154" y1="628.0" x2="668" y2="628.0" stroke="#edf1f4"/>
+<text x="411.0" y="734.0" class="tiny" text-anchor="middle">328</text>
+<text x="146.0" y="632.0" class="tiny" text-anchor="end">12.0</text>
+<line x1="154" y1="671.0" x2="668" y2="671.0" stroke="#edf1f4"/>
+<text x="539.5" y="734.0" class="tiny" text-anchor="middle">493</text>
+<text x="146.0" y="675.0" class="tiny" text-anchor="end">6.00</text>
+<line x1="154" y1="714.0" x2="668" y2="714.0" stroke="#edf1f4"/>
+<text x="668.0" y="734.0" class="tiny" text-anchor="middle">657</text>
+<text x="146.0" y="718.0" class="tiny" text-anchor="end">0.00</text>
+<line x1="154" y1="542" x2="154" y2="714" stroke="#798996"/>
+<line x1="154" y1="714" x2="668" y2="714" stroke="#798996"/>
+<line x1="283.6" y1="542" x2="283.6" y2="714" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="287.6" y="556.0" class="tiny" text-anchor="start">second stage</text>
+<line x1="459.9" y1="542" x2="459.9" y2="714" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="463.9" y="556.0" class="tiny" text-anchor="start">third stage proxy</text>
+<polyline fill="none" stroke="#d9822b" stroke-width="2.6" points="154.0,714.0 157.9,713.4 161.8,711.5 165.7,707.8 169.6,702.1 173.6,694.1 177.5,683.8 181.4,671.0 185.3,656.2 189.2,639.7 193.1,622.2 197.0,604.3 200.9,588.2 204.9,574.4 208.8,563.5 212.7,557.2 216.6,564.5 220.5,576.4 224.4,591.7 228.3,609.4 232.2,628.1 236.2,646.8 240.1,663.7 244.0,678.0 247.9,689.0 251.8,697.5 255.7,703.4 259.6,707.2 263.5,709.8 267.5,711.4 271.4,712.5 275.3,713.2 279.2,713.6 280.0,713.7 283.6,713.9 287.5,714.0 291.5,714.0 295.4,714.0 299.3,714.0 303.2,714.0 307.1,714.0 311.0,714.0 314.9,714.0 318.8,714.0 322.8,714.0 326.7,714.0 330.6,714.0 334.5,714.0 338.4,714.0 342.3,714.0 346.2,714.0 350.1,714.0 354.0,714.0 358.0,714.0 361.9,714.0 365.8,714.0 369.7,714.0 373.6,714.0 377.5,714.0 381.4,714.0 385.3,714.0 389.3,714.0 393.2,714.0 397.1,714.0 401.0,714.0 404.9,714.0 408.8,714.0 412.7,714.0 416.6,714.0 420.6,714.0 424.5,714.0 428.4,714.0 432.3,714.0 436.2,714.0 440.1,714.0 444.0,714.0 447.9,714.0 451.9,714.0 455.8,714.0 457.3,714.0 459.9,714.0 463.8,714.0 467.7,714.0 471.6,714.0 475.5,714.0 479.4,714.0 483.3,714.0 487.3,714.0 491.2,714.0 495.1,714.0 499.0,714.0 502.9,714.0 506.8,714.0 510.7,714.0 514.6,714.0 518.6,714.0 522.5,714.0 526.4,714.0 530.3,714.0 534.2,714.0 538.1,714.0 542.0,714.0 545.9,714.0 549.9,714.0 553.8,714.0 557.7,714.0 561.6,714.0 565.5,714.0 569.4,714.0 573.3,714.0 577.2,714.0 581.2,714.0 585.1,714.0 589.0,714.0 592.9,714.0 596.8,714.0 600.7,714.0 604.6,714.0 608.5,714.0 612.4,714.0 616.4,714.0 620.3,714.0 624.2,714.0 628.1,714.0 632.0,714.0 635.9,714.0 639.8,714.0 643.7,714.0 647.7,714.0 651.6,714.0 655.5,714.0 659.4,714.0 663.3,714.0 667.2,714.0 668.0,714.0"/>
+<circle cx="668.0" cy="714.0" r="4.5" fill="#d9822b"/>
+<text x="391.0" y="750.0" class="tiny" text-anchor="middle">Time (s)</text>
+<text transform="translate(114.0 633.0) rotate(-90)" class="tiny" text-anchor="middle">q (kPa)</text>
+<rect x="786" y="504" width="590" height="258" rx="14" fill="#ffffff" stroke="#d9e1e8"/>
+<text x="806.0" y="530.0" class="label" text-anchor="start">Vehicle mass</text>
+<line x1="844" y1="542.0" x2="1358" y2="542.0" stroke="#edf1f4"/>
+<text x="844.0" y="734.0" class="tiny" text-anchor="middle">0.00</text>
+<text x="836.0" y="546.0" class="tiny" text-anchor="end">2250</text>
+<line x1="844" y1="585.0" x2="1358" y2="585.0" stroke="#edf1f4"/>
+<text x="972.5" y="734.0" class="tiny" text-anchor="middle">164</text>
+<text x="836.0" y="589.0" class="tiny" text-anchor="end">1688</text>
+<line x1="844" y1="628.0" x2="1358" y2="628.0" stroke="#edf1f4"/>
+<text x="1101.0" y="734.0" class="tiny" text-anchor="middle">328</text>
+<text x="836.0" y="632.0" class="tiny" text-anchor="end">1125</text>
+<line x1="844" y1="671.0" x2="1358" y2="671.0" stroke="#edf1f4"/>
+<text x="1229.5" y="734.0" class="tiny" text-anchor="middle">493</text>
+<text x="836.0" y="675.0" class="tiny" text-anchor="end">562</text>
+<line x1="844" y1="714.0" x2="1358" y2="714.0" stroke="#edf1f4"/>
+<text x="1358.0" y="734.0" class="tiny" text-anchor="middle">657</text>
+<text x="836.0" y="718.0" class="tiny" text-anchor="end">0.00</text>
+<line x1="844" y1="542" x2="844" y2="714" stroke="#798996"/>
+<line x1="844" y1="714" x2="1358" y2="714" stroke="#798996"/>
+<line x1="973.6" y1="542" x2="973.6" y2="714" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="977.6" y="556.0" class="tiny" text-anchor="start">second stage</text>
+<line x1="1149.9" y1="542" x2="1149.9" y2="714" stroke="#bcc8d2" stroke-dasharray="5 5"/>
+<text x="1153.9" y="556.0" class="tiny" text-anchor="start">third stage proxy</text>
+<polyline fill="none" stroke="#2e8b57" stroke-width="2.6" points="844.0,547.3 847.9,550.7 851.8,554.0 855.7,557.4 859.6,560.8 863.6,564.1 867.5,567.5 871.4,570.8 875.3,574.2 879.2,577.5 883.1,580.9 887.0,584.3 890.9,587.6 894.9,591.0 898.8,594.3 902.7,597.7 906.6,601.0 910.5,604.4 914.4,607.8 918.3,611.1 922.2,614.5 926.2,617.8 930.1,621.2 934.0,624.5 937.9,627.9 941.8,631.3 945.7,634.6 949.6,638.0 953.5,641.3 957.5,644.7 961.4,648.0 965.3,651.4 969.2,654.8 970.0,655.2 973.6,675.6 977.5,676.1 981.5,676.5 985.4,677.0 989.3,677.5 993.2,678.0 997.1,678.5 1001.0,678.9 1004.9,679.4 1008.8,679.9 1012.8,680.4 1016.7,680.9 1020.6,681.3 1024.5,681.8 1028.4,682.3 1032.3,682.8 1036.2,683.3 1040.1,683.8 1044.0,684.2 1048.0,684.7 1051.9,685.2 1055.8,685.7 1059.7,686.2 1063.6,686.6 1067.5,687.1 1071.4,687.6 1075.3,688.1 1079.3,688.6 1083.2,689.1 1087.1,689.5 1091.0,690.0 1094.9,690.5 1098.8,691.0 1102.7,691.5 1106.6,691.9 1110.6,692.4 1114.5,692.9 1118.4,693.4 1122.3,693.9 1126.2,694.3 1130.1,694.8 1134.0,695.3 1137.9,695.8 1141.9,696.3 1145.8,696.8 1147.3,696.9 1149.9,700.4 1153.8,700.6 1157.7,700.8 1161.6,700.9 1165.5,701.1 1169.4,701.2 1173.3,701.4 1177.3,701.5 1181.2,701.7 1185.1,701.8 1189.0,702.0 1192.9,702.2 1196.8,702.3 1200.7,702.5 1204.6,702.6 1208.6,702.8 1212.5,702.9 1216.4,703.1 1220.3,703.2 1224.2,703.4 1228.1,703.6 1232.0,703.7 1235.9,703.9 1239.9,704.0 1243.8,704.2 1247.7,704.3 1251.6,704.5 1255.5,704.7 1259.4,704.8 1263.3,705.0 1267.2,705.1 1271.2,705.3 1275.1,705.4 1279.0,705.6 1282.9,705.7 1286.8,705.9 1290.7,706.1 1294.6,706.2 1298.5,706.4 1302.4,706.5 1306.4,706.7 1310.3,706.8 1314.2,707.0 1318.1,707.1 1322.0,707.3 1325.9,707.5 1329.8,707.6 1333.7,707.8 1337.7,707.9 1341.6,708.1 1345.5,708.2 1349.4,708.4 1353.3,708.5 1357.2,708.7 1358.0,708.7"/>
+<circle cx="1358.0" cy="708.7" r="4.5" fill="#2e8b57"/>
+<text x="1081.0" y="750.0" class="tiny" text-anchor="middle">Time (s)</text>
+<text transform="translate(804.0 633.0) rotate(-90)" class="tiny" text-anchor="middle">Mass (t)</text>
+<circle cx="212.7" cy="557.2" r="6" fill="#c84630" stroke="#ffffff" stroke-width="2"/>
+<text x="226.7" y="549.2" class="small" text-anchor="start">max-Q 21.9 kPa</text>
+<rect x="92" y="794" width="1316" height="54" rx="14" fill="#f6f8fb" stroke="#d9e1e8"/>
+<text x="120.0" y="826.0" class="small" text-anchor="start">Stage transitions: second_stage at 166 s, third_stage_proxy at 391 s</text>
+<text x="760.0" y="826.0" class="small" text-anchor="start">Terminal state: altitude 306.9 km, inertial speed 7.723 km/s, flight-path angle -0.02 deg.</text>
+</svg>
