@@ -1,0 +1,56 @@
+{
+  "version": "v1.0",
+  "optimization_algorithm": "PSO (Particle Swarm Optimization)",
+  "best_design": {
+    "pitch_end_time_s": 200.0,
+    "final_pitch_deg": 2.0,
+    "shape_exponent": 1.786,
+    "vertical_time_s": 20.0
+  },
+  "terminal_state": {
+    "altitude_km": 350.25097501313405,
+    "inertial_speed_km_s": 7.392740752588832,
+    "flight_path_angle_deg": 9.015165768392585,
+    "final_mass_t": 65.00000000000162
+  },
+  "path_constraints": {
+    "max_dynamic_pressure_kPa": 29.008667647155164,
+    "max_mach": 17.7515025788882,
+    "max_acceleration_g": 8.769559431596349,
+    "max_heating_kW_m2": 12154.54773316612
+  },
+  "gravity_model_comparison": {
+    "spherical": {
+      "altitude_km": 350.2639114053445,
+      "speed_m_s": 7351.412354644149
+    },
+    "J2_only": {
+      "altitude_km": 350.25332963387575,
+      "speed_m_s": 7392.741615964305
+    },
+    "J2_J3_J4": {
+      "altitude_km": 350.25097501313405,
+      "speed_m_s": 7392.740752588832
+    }
+  },
+  "gravity_J2_effect": {
+    "altitude_delta_km": -0.0105817714687646,
+    "speed_delta_m_s": 41.32926132015655
+  },
+  "tli_budget": {
+    "delta_v_km_s": 3.108186818492537,
+    "c3_km2_s2": 0.0,
+    "tof_days": 4.979728516982404,
+    "eccentricity": 0.965883432931616,
+    "lunar_arrival_km_s": 0.9150843461348716,
+    "mass_ratio": 2.0224837423131765,
+    "midcourse_dv_m_s": 25.0
+  },
+  "mass_budget": {
+    "leo_stack_t": 96.91696646713643,
+    "tli_propellant_t": 48.997191173274466,
+    "tli_stage_dry_t": 3.9197752938619574,
+    "per_launch_leo_wet_mass_t": 48.45848323356822,
+    "simulated_margin_t": 16.541516766433404
+  }
+}
