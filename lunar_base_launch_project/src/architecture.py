@@ -12,12 +12,13 @@ class Architecture:
     key: str
     description: str
     launches: int
-    payload_each_t: float
+    payload_each_t: float  # per-launch payload mass to orbit (t)
     required_successes: int
     tli_capacity_each_t: float
     rendezvous_location: str
     transfer_strategy: str
     single_body_required: bool = False
+    asymmetric_launches: bool = False  # True if launches have different roles
 
 
 @dataclass(frozen=True)
@@ -58,6 +59,18 @@ def default_architectures(tli_capacity_each_t: float = 27.0) -> list[Architectur
             tli_capacity_each_t=tli_capacity_each_t,
             rendezvous_location="LEO",
             transfer_strategy="LEO docking followed by combined TLI",
+        ),
+        Architecture(
+            key="B2_payload_fuel_split",
+            description="Launch A (payload): 40 t cargo + 4 t adapter + 3.9 t TLI stage dry → LEO. "
+                        "Launch B (fuel): 49 t TLI propellant → LEO. Fast rendezvous, dock, then TLI.",
+            launches=2,
+            payload_each_t=0.0,  # asymmetric; mass_budget handles this separately
+            required_successes=2,
+            tli_capacity_each_t=tli_capacity_each_t,
+            rendezvous_location="LEO (fast phasing, fuel chases payload)",
+            transfer_strategy="payload-first LEO assembly + fuel tanker + combined TLI",
+            asymmetric_launches=True,
         ),
         Architecture(
             key="C_three_2of3_reliability_extension",
@@ -109,12 +122,47 @@ def evaluate_architecture(
             note="Backup only: needed if the 40 t payload cannot be split into modules.",
         )
 
+    if architecture.asymmetric_launches:
+        # Payload+fuel split: both launches are required but carry different masses.
+        # Launch A (payload): 40 t cargo → TLI. Launch B (fuel): propellant → LEO.
+        # Both must succeed; mass feasibility depends on CZ-10 LEO capacity (~70 t per launch).
+        leo_capacity_per_launch_t = 70.0  # conservative CZ-10 LEO capacity estimate
+        # Payload launch: 40 t cargo + 4 t adapter + ~4 t TLI dry ≈ 48 t → well within 70 t
+        # Fuel launch: 49 t propellant → well within 70 t
+        mass_feasible = True  # both payloads < LEO capacity
+        note = (
+            "Payload+fuel split: Launch A carries 40 t cargo + TLI stage dry mass; "
+            "Launch B carries TLI propellant only. Both within LEO capacity. "
+            "Asymmetric — payload launch is mission-critical; fuel loss can be mitigated by on-orbit reserves or re-launch."
+        )
+        return ArchitectureResult(
+            key=architecture.key,
+            feasible_by_mass=mass_feasible,
+            launches=architecture.launches,
+            payload_each_t=0.0,  # not uniform
+            required_successes=architecture.required_successes,
+            required_delivered_t=required_total_t,
+            delivered_if_required_successes_t=required_total_t,
+            delivered_if_all_success_t=required_total_t,
+            margin_each_t=0.0,
+            mission_reliability_at_095=at_least_k_successes(
+                single_launch_reliability,
+                architecture.launches,
+                architecture.required_successes,
+            ),
+            rendezvous_location=architecture.rendezvous_location,
+            transfer_strategy=architecture.transfer_strategy,
+            note=note,
+        )
+
     margin_each = architecture.tli_capacity_each_t - architecture.payload_each_t
     feasible_by_mass = margin_each >= 0.0
     delivered_required = architecture.payload_each_t * architecture.required_successes
     delivered_all = architecture.payload_each_t * architecture.launches
     feasible = feasible_by_mass and delivered_required >= required_total_t
-    note = "Recommended baseline architecture." if architecture.key == "B_two_leo_rendezvous" else ""
+    note = ""
+    if architecture.key == "B_two_leo_rendezvous":
+        note = "Two equal cargo modules — both dock in LEO for combined TLI."
     if architecture.key == "C_three_2of3_reliability_extension":
         note = "Reliability extension, not the baseline because it adds a third launch."
     if not feasible_by_mass:

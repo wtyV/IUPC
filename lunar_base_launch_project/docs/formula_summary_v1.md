@@ -1,6 +1,14 @@
 # 月球基地运载方案 — 完整数学物理建模公式
 
-**任务目标**：两枚长征十号运载火箭将总计 40 t 月球基地建设物资送入地月转移轨道（TLI：Translunar Injection）。任务链为：Launch A → LEO + Launch B → LEO → 轨道交会对接 → 组合体 TLI 点火。
+**任务目标**：两枚长征十号运载火箭将总计 40 t 月球基地建设物资送入地月转移轨道（TLI：Translunar Injection）。
+
+**推荐任务架构 —— 载荷+燃料分开发射**（Payload-Fuel Split）：
+
+- **Launch A（载荷先发）**：将 40 t 月球基地物资 + 4 t 对接适配器 + TLI 级干质量（发动机/结构）送入 300 km LEO 停泊轨道。
+- **Launch B（燃料后发）**：将 TLI 级推进剂送入 LEO，利用低轨快速调相与 A 交会对接。
+- **组合体 TLI 点火**：A + B 对接后形成完整 TLI 级，近地点点火进入地月转移椭圆。
+
+该方案的优势：(1) 载荷先到先等，不需拆分；(2) 燃料为纯推进剂，发射失败可重新发射；(3) 低轨快速交会缩短等待时间。
 
 ---
 
@@ -662,6 +670,41 @@ $$\boxed{\Delta v_{\text{rendezvous}} = \Delta v_{\text{Hohmann}}(r_{\text{phase
 
 其中 $\Delta v_{\text{docking}} \approx 20$ m/s 为对接和姿控余量。
 
+### 7.6 载荷-燃料快速交会（Payload-Fuel Fast Rendezvous）
+
+适用于非对称发射架构：载荷（Launch A）已在 300 km 目标轨道等待，燃料罐（Launch B）以更低调相轨道追赶。
+
+**追赶原理**：较低轨道的角速度更大（Kepler 第三定律 n = √(μ/r³)），因此燃料罐以相对角速度 Δn 逐渐追上载荷：
+
+$$\boxed{\dot{\theta}_{\text{rel}} = n_{\text{phase}} - n_{\text{target}} > 0}, \quad r_{\text{phase}} < r_{\text{target}}$$
+
+**等待时间**（闭合初始相位角 Δθ）：
+
+$$\boxed{t_{\text{wait}} = \frac{\Delta\theta}{|\dot{\theta}_{\text{rel}}|}}$$
+
+**Hohmann 上调转移** — 燃料罐从调相轨道提升至目标轨道与载荷对接：
+
+$$\boxed{\Delta v_{\text{transfer}} = |v_{t1} - v_{\text{phase}}| + |v_{\text{target}} - v_{t2}|}$$
+
+其中 v_t1, v_t2 为转移椭圆首末速度。
+
+**调相轨道选取的权衡**：
+
+| 调相高度 (km) | Δn (deg/h) | 最差等待 (h, Δθ=120°) | Hohmann Δv (m/s) |
+|---|---|---|---|
+| 250 | 2.71 | 44.2 | 44.1 |
+| 270 | 1.62 | 74.0 | 32.4 |
+| 280 | 1.08 | 111.2 | 26.6 |
+| 290 | 0.54 | 222.9 | 20.8 |
+| 295 | 0.27 | 446.2 | 17.9 |
+
+**发射窗口**：B 必须在文昌发射场穿越 A 轨道面时发射。对于 ~19.6° 倾角、300 km 轨道，每日 2 次窗口，每次约 5–10 分钟。
+
+**快速交会的工程策略**：
+- 若 B 发射时 Δθ ≤ 30°（通过精确发射时刻控制），280 km 调相约 28 h 可完成交会
+- 若采用更激进的 250 km 调相轨，30° 初始相位仅需 ~11 h，但 Δv 增至约 44 m/s
+- 总 Δv 预算：Hohmann 上调 + 对接余量 ≈ 20–60 m/s（取决于调相轨选择）
+
 ---
 
 ## 第八章 齐奥尔科夫斯基火箭方程与质量预算
@@ -729,6 +772,45 @@ $$m_{\text{dry}} = 0.08 \times 49.0 = 3.92 \text{ t}$$
 $$m_{\text{stack,LEO}} = 44 + 49.0 + 3.92 = 96.9 \text{ t}$$
 
 $$m_{\text{LEO, per launch}} = \frac{96.9}{2} = 48.5 \text{ t}$$
+
+### 8.4 非对称发射质量预算（载荷+燃料分开发射）
+
+**架构**：Launch A 载荷→LEO（先发）+ Launch B 燃料→LEO（后发）→ 快速交会对接 → 组合 TLI。
+
+**已知**：
+- $m_{\text{cargo}} = 40$ t（不可分割的月球基地物资）
+- $m_{\text{adapter}} = 4$ t（对接机构与适配器）
+- $m_{\text{fixed}} = m_{\text{cargo}} + m_{\text{adapter}} = 44$ t（必须到达月球的质量）
+- $I_{\text{sp}} = 450$ s, $\varepsilon = 0.08$
+
+**TLI 级推进剂质量反解**（同 §8.2）：
+
+$$\boxed{m_{\text{prop}} = \frac{(\text{MR} - 1) \cdot m_{\text{fixed}}}{1 - (\text{MR} - 1) \cdot \varepsilon}} = 49.0 \text{ t}$$
+
+$$\boxed{m_{\text{dry}} = \varepsilon \cdot m_{\text{prop}} = 3.92 \text{ t}}$$
+
+**发射分配**：
+
+$$\boxed{m_{\text{LEO,A}} = m_{\text{fixed}} + m_{\text{dry}} = 44 + 3.92 = 47.9 \text{ t (Launch A)}}$$
+
+$$\boxed{m_{\text{LEO,B}} = m_{\text{prop}} = 49.0 \text{ t (Launch B)}}$$
+
+$$\boxed{m_{\text{stack,LEO}} = m_{\text{LEO,A}} + m_{\text{LEO,B}} = 96.9 \text{ t}}$$
+
+**LEO 运力验证**（CZ-10 估计 LEO 运力 ~70 t）：
+
+| 发射 | 需入轨质量 | LEO 运力 | 余量 |
+|------|-----------|---------|------|
+| Launch A（载荷+TLI 发动机） | 47.9 t | ~70 t | ~22.1 t |
+| Launch B（TLI 推进剂） | 49.0 t | ~70 t | ~21.0 t |
+
+两发均在 CZ-10 运力范围内，余量充足。
+
+**TLI 后的状态**：
+
+$$\boxed{m_f = m_{\text{fixed}} + m_{\text{dry}} = 47.9 \text{ t}}$$
+
+质量比 $\text{MR} = 96.9 / 47.9 = 2.0225$，与对称方案完全相同——TLI 性能不变。
 
 ---
 
@@ -827,6 +909,37 @@ $$R_{\text{total}} = 0.95^2 \times 0.98 \times 0.985 = 0.8712$$
 - $R_{\text{rendezvous}} \in [0.94, 0.995]$
 - $R_{\text{TLI}} \in [0.94, 0.995]$
 - 在 $R_L = 0.95$ 固定下，$R_{\text{total}} \in [0.797, 0.893]$
+
+### 10.4 非对称发射可靠性（载荷+燃料分开发射）
+
+载荷（Launch A）与燃料（Launch B）角色不同，可靠性结构有区别：
+
+**Launch A 失败 = 任务失败**（载荷不可替代）。
+**Launch B 失败 = 可补救**（燃料可重新发射，载荷在轨等待）。
+
+**不可重发方案**（两发必须一次成功）：
+
+$$\boxed{R_{\text{asym, no-relaunch}} = R_L^2 \cdot R_{\text{rendezvous}} \cdot R_{\text{TLI}}}$$
+
+与对称方案数值相同。
+
+**可重发方案**（B 失败后允许重发一次燃料）：
+
+$$\boxed{R_{\text{asym, relaunch}} = R_L \cdot [R_L + (1 - R_L) \cdot R_L'] \cdot R_{\text{rendezvous}} \cdot R_{\text{TLI}}}$$
+
+其中 $R_L'$ 为燃料重发可靠性（可取与首发相同值）。
+
+**基线数值对比** ($R_L = 0.95$, $R_{\text{rend}} = 0.98$, $R_{\text{TLI}} = 0.985$):
+
+| 方案 | 发射环节可靠度 | 总可靠度 |
+|------|-------------|---------|
+| 对称两发（旧） | $R_L^2 = 0.9025$ | 0.8712 |
+| 非对称无重发 | $R_L^2 = 0.9025$ | 0.8712 |
+| 非对称可重发 | $R_L \cdot [R_L + (1-R_L)R_L] = 0.95 \times 0.9975 = 0.9476$ | 0.9148 |
+
+重发燃料使发射环节可靠度提升约 5 个百分点，总可靠度从 0.871 提升至 0.915。
+
+**关键结论**：载荷+燃料分离架构在可靠性上的核心优势不是串联公式本身，而是燃料发射失败时不需要重建整个载荷模块，只需重新发射推进剂。
 
 ---
 
@@ -1104,12 +1217,15 @@ $$v_h = \sqrt{\|\mathbf{v}\|^2 - v_r^2}$$
 | §7.3 | C3 发射能量参数 | `transfer_full.py` |
 | §7.4 | Hohmann 圆轨道间转移 | `rendezvous.py` |
 | §7.5 | 圆轨道角速度 / 相位交会 | `rendezvous.py` |
+| §7.6 | 载荷-燃料快速交会 | `rendezvous.py` → `estimate_fast_rendezvous()` |
 | §8.1 | 齐奥尔科夫斯基火箭方程 | `mass_budget.py` |
-| §8.2 | TLI 级质量预算 | `mass_budget.py` |
+| §8.2 | TLI 级质量预算（对称） | `mass_budget.py` → `solve_tli_mass_budget()` |
+| §8.4 | 非对称发射质量预算 | `mass_budget.py` → `solve_split_mass_budget()` |
 | §9.1–§9.5 | ECEF 坐标 / 自转速度 / 倾角-方位角 | `frames.py`, `launch_geometry.py` |
 | §10.1 | 发动机簇可靠性 (k-out-of-N) | `reliability.py` |
 | §10.2 | 多发任务可靠性 | `reliability.py` |
 | §10.3 | 总任务串联可靠性链 | `reliability.py` |
+| §10.4 | 非对称发射可靠性 | `reliability.py` → `payload_fuel_split_reliability()` |
 | §11.1 | PSO 速度/位置更新 + 惯性权重衰减 | `optimizers.py` |
 | §11.2 | GA 锦标赛选择 + BLX-α 交叉 + 高斯变异 | `optimizers.py` |
 | §11.3 | SA Metropolis 准则 + 温度衰减 + 自适应邻域 | `optimizers.py` |
@@ -1125,8 +1241,9 @@ $$v_h = \sqrt{\|\mathbf{v}\|^2 - v_r^2}$$
 
 | 指标 | 符号 | 数值 |
 |------|------|------|
-| 推荐任务架构 | — | 两发 CZ-10 → LEO 交会对接 → 组合体 TLI |
-| 每发载荷质量 | $m_{\text{payload}}$ | 20 t |
+| 推荐任务架构 | — | 载荷（先发）+ 燃料（后发）→ LEO 快速交会对接 → 组合体 TLI |
+| Launch A 入轨质量（载荷+TLI 发动机） | $m_{\text{LEO,A}}$ | 47.9 t |
+| Launch B 入轨质量（TLI 推进剂） | $m_{\text{LEO,B}}$ | 49.0 t |
 | 目标停泊轨道高度 | $h^*$ | 300 km |
 | 目标圆轨道速度 | $v_{\text{circ}}$ | 7.730 km/s |
 | 文昌正东发射自转增益 | $\Delta v_{\text{rot}}$ | ~438 m/s |
@@ -1136,13 +1253,16 @@ $$v_h = \sqrt{\|\mathbf{v}\|^2 - v_r^2}$$
 | TLI 转移椭圆偏心率 | $e$ | 0.9659 |
 | LEO 组合体初始质量 | $m_{\text{stack,LEO}}$ | 96.9 t |
 | TLI 级推进剂质量 | $m_{\text{prop}}$ | 49.0 t |
-| TLI 级干质量 | $m_{\text{dry}}$ | 3.9 t |
-| 每发 LEO 湿质量需求 | $m_{\text{LEO, per launch}}$ | 48.5 t |
+| TLI 级干质量 | $m_{\text{dry}}$ | 3.92 t |
 | S1 级推进剂 | $m_{\text{prop,S1}}$ | 1 420 t |
 | S2 级推进剂 | $m_{\text{prop,S2}}$ | 285 t |
 | S1 级真空推力 | $T_{\text{vac,S1}}$ | 29.34 MN |
 | 总发射质量 | $m_0$ | ~2 034 t |
-| 可靠性链 ($R_L=0.95$) | $R_{\text{total}}$ | 0.871 |
+| 可靠性链 (对称, $R_L=0.95$) | $R_{\text{total}}$ | 0.871 |
+| 可靠性链 (非对称可重发) | $R_{\text{total}}$ | 0.915 |
 | J2 对入轨高度影响 | $\Delta h_{J2}$ | ~0 km |
 | J2 对入轨速度影响 | $\Delta v_{J2}$ | ~+41 m/s |
 | J3/J4 相对 J2 的贡献比 | — | $\sim 10^{-3}$ |
+| 快速交会：280 km 调相，Δθ=120° 最差等待 | $t_{\text{wait}}$ | ~111 h |
+| 快速交会：280 km 调相，Δθ=30° 等待 | $t_{\text{wait}}$ | ~28 h |
+| 快速交会总 Δv（上调 + 对接，280 km） | $\Delta v_{\text{rendezvous}}$ | ~27 m/s |
